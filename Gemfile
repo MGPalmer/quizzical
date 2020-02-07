@@ -28,6 +28,8 @@ gem "redis", "~> 4.0"
 gem "sidekiq"
 gem "activeadmin"
 gem "devise"
+gem "honeybadger", "~> 4.0"
+gem "pg"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.2", require: false
