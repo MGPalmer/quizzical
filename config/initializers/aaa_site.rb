@@ -1,2 +1,3 @@
-SITE_DOMAIN = "quizzical.example.com"
-DEVISE_MAIL_SENDER = "signup@#{SITE_DOMAIN}"
+x = Rails.application.config.x
+x.site_domain = "quizzical.example.com"
+x.devise_sender = "signup@#{x.site_domain}"
