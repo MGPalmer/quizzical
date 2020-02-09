@@ -6,4 +6,6 @@ class User < ApplicationRecord
          #:recoverable, :rememberable,
          :validatable,
          :confirmable
+
+  scope :confirmed, -> { where("confirmed_at IS NOT NULL") }
 end
