@@ -5,17 +5,19 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': "reload" %>
+    <%= stylesheet_pack_tag "stylesheets/application", media: "all", 'data-turbolinks-track': "reload" %>
     <%= javascript_pack_tag "application", 'data-turbolinks-track': "reload" %>
   </head>
 
   <body>
-    <div>
-      <h1><%= I18n.t("x.site_name") %></h1>
-    </div>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="container">
+      <div>
+        <h1><%= I18n.t("x.site_name") %></h1>
+      </div>
+      <p class="notice badge badge-success"><%= notice %></p>
+      <p class="alert badge badge-danger"><%= alert %></p>
 
-    <%= yield %>
+      <%= yield %>
+    </div>
   </body>
 </html>

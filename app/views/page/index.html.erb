@@ -3,3 +3,12 @@
   There are <span class="user_count"><%= @user_count %></span> 
 suckers that gave us their email addresses.
 </p>
+<p>
+<% if user_signed_in? %>
+You're one of them. <%= link_to "Wanna log out?", destroy_user_session_path, method: :delete %>
+<% else %>
+<%= link_to "Wanna be one of them?", new_user_registration_path %>
+or
+<%= link_to "Log in", new_user_session_path %>
+<% end %>
+</p>
