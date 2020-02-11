@@ -16,6 +16,11 @@ module VhostVsHerokuTest
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    unless Rails.env.test?
+      config.active_job.queue_adapter = :sidekiq
+      config.active_job.queue_name_prefix = "quizzical"
+    end
+
     if Rails.env.production? or (Rails.env.development? and ENV["SEND_REAL_MAILS_IN_DEVELOPMENT"] == "true")
       config.action_mailer.smtp_settings = {
         address: Rails.application.credentials.hosteurope[:smtp][:server],
