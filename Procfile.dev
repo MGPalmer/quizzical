@@ -1,4 +1,4 @@
 web: bin/rails server
 worker: bin/sidekiq -c 1 -q quizzical_mailers
 redis: redis-server
-redimon: sleep 1; redis-cli monitor
+#redimon: sleep 1; redis-cli monitor

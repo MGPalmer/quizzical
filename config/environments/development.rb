@@ -64,5 +64,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.x.site_domain = "localhost"
-  config.action_mailer.default_url_options = { host: config.x.site_domain, port: 3000 }
+  config.action_mailer.default_url_options = { host: config.x.site_domain, port: 5000 }
+
+  config.action_controller.action_on_unpermitted_parameters = :raise
 end
