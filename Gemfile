@@ -29,6 +29,7 @@ gem "devise"
 gem "devise-bootstrap-views", "~> 1.0"
 gem "honeybadger", "~> 4.0"
 gem "pg"
+gem "newrelic_rpm"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.2", require: false
